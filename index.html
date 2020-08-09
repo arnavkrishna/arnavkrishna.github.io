@@ -19,10 +19,10 @@
                 font-family: Menlo, Monaco, 'Courier New', monospace;
                 color:black;
             }
-
-            #cat {
-                margin: 40px;
-                height: 10px;
+            #timer {
+                margin:45px;
+                font-family: Menlo, Monaco, 'Courier New', monospace;
+                color:black;
             }
         </style>
         <script>
@@ -42,8 +42,6 @@
         
         document.addEventListener('DOMContentLoaded', function()    {
             document.querySelector('h2').innerHTML = localStorage.getItem('counter');
-            document.querySelector('button').onclick = count;
-
             setInterval(count, 1000);
 
         });
