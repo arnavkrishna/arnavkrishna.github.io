@@ -24,8 +24,31 @@
                 margin: 40px;
                 height: 10px;
             }
-          
         </style>
+        <script>
+
+        // if there is nothing [if (!..) indicates if not] in local storage, set counter to 0
+        if (!localStorage.getItem('counter')) {
+            localStorage.setItem('counter', 0);
+
+        }
+
+        function count() {
+            let counter = localStorage.getItem('counter');
+            counter++;
+            document.querySelector('h2').innerHTML = counter;
+            localStorage.setItem('counter',counter);
+        }
+        
+        document.addEventListener('DOMContentLoaded', function()    {
+            document.querySelector('h2').innerHTML = localStorage.getItem('counter');
+            document.querySelector('button').onclick = count;
+
+            setInterval(count, 1000);
+
+        });
+
+        </script>
     </head>
     <body>
         
@@ -36,6 +59,11 @@
 
         <div id=email>
             e: arnavkrishna.1@gmail.com
+        </div>
+
+        <div id=timer>
+            <h2>--</h2>
+
         </div>
     </body>
 </html>
