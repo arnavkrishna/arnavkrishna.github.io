@@ -27,6 +27,41 @@
                 color:black;
                 align-content: flex-end;
             }
+            p {
+                height: 14px;
+            }
+
+            button {
+            color:black;
+            padding: 15px;
+            margin: 45px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            font-weight: italic;
+            background-color: white;   
+            }
+            a:link {
+            color: black;
+            background-color: transparent;
+            text-decoration: none;
+            }
+
+            a:visited {
+            color:black;
+            background-color: transparent;
+            text-decoration: none;
+            }
+
+            a:hover {
+            color:orange;
+            background-color: transparent;
+            }
+
+            a:active {
+            color: yellow;
+            background-color: transparent;;
+            }
+
         </style>
         <script>
 
@@ -48,7 +83,14 @@
             setInterval(count, 1000);
 
         });
-
+       
+            window.onscroll = () => {
+                if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                    document.querySelector('body').style.background = 'blue';
+                } else {
+                    document.querySelector('body').style.background = 'white';
+                }
+            }
         </script>
     </head>
     <body>
@@ -61,9 +103,31 @@
         <div id=email>
             e: arnavkrishna.1@gmail.com
         </div>
+        <button>
+          <a href="https://arnavkrishna.github.io/email.php">Send me an email</a>
+        </button>
+        <p></p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
+        <p> </p>
 
         <div id=timer>
-            <h2 style="font-weight: lighter; font-size: 12px;">0</h2>
+            <h2 style="font-weight: lighter; font-size: 12px;">--</h2>
 
         </div>
     </body>
