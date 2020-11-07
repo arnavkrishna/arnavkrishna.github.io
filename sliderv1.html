@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Donate! </title>
+        <style>
+
+            #container {
+                padding-top: 10px;
+                align-content: center;
+            }
+
+             #texts {   
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 14;
+                font-weight: bold;
+                
+                }
+
+            #textbelow {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 14;
+                margin-left: 12px;
+                padding-top: 10px;
+            }
+
+            .slidecontainer {
+                    width: 100%;
+                    }
+
+            .slider {
+            -webkit-appearance: none;
+            width: 420px;
+            height: 10px;
+            margin-bottom: 20px;
+            margin-left: 12px;
+            border-radius: 0px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            }
+
+            .slider:hover {
+            opacity: 1;
+            }
+
+            .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 64px;
+            height: 64px;
+            border: 0;
+            background: url('forklift.png');
+            cursor: pointer;
+            }
+
+            .slider::-moz-range-thumb {
+            width: 64px;
+            height: 64px;
+            border: 10;
+            background: url('forklift.png');
+            cursor: pointer;
+            }
+            
+            #texts {
+               padding-left: 10px;
+            }
+
+            #truck {
+                margin-top: 20px;
+            }
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 style="font-family: Arial, Helvetica, sans-serif;">Drive the forklift to see how many balanced meals your donation will provide</h1>
+        
+        <div id=container class="slidecontainer">
+            <input type="range" min="5" max="12000" value="5" class="slider" id="myRange">
+            <img id=truck src="delivery-truck.png" alt="truck">
+        </div>
+        <div id=texts>
+  <p>Donation Amount ($): <span id="demo"></span></p>
+  <p>Balanced Meals Provided: <span id="meal"><span></p>
+
+      </div>
+
+      <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+
+        function calcMeal(a,b) {
+            return a * b;
+        }
+
+        var rate = .91;
+
+        var Meal = Math.round(calcMeal(slider.value,rate));
+        document.getElementById("meal").innerHTML = Meal;
+
+        slider.oninput = function() {
+          output.innerHTML = this.value;
+          meal.innerHTML = Math.round(this.value * .91);
+        }
+
+        </script>
+        <div id=textbelow>
+        <p>A donation of 12,000 dollars fills one boxtruck with balanced meals.</p>
+        <p>The cost of a balanced meal is calculated using the USDA MyPlate guidelines and FBNYC's FY20 wholesale costs.</p>
+        </div>
+
+    </body>
+</html>
