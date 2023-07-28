@@ -1,61 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        #tab title
-        <title> hello </title>
-        <style>
-            #header {
-                margin: 45px;
-                height: 18px;
-                font-size: 28px;
-                font-family: Menlo, Monaco, 'Courier New', monospace;
-                color: black;
-                height: fit-content;
-                width: fit-content;
-                border:orange solid 3px;
-                padding: 15px;
-            }
-            #email {
-                margin:45px;
-                font-family: Menlo, Monaco, 'Courier New', monospace;
-                color:black;
-            }
-            p {
-                height: 14px;
-            }
 
-        </style>
+<head>
+  <meta charset="UTF-8">
+  <title>hello</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <style>
+    #header {
+      margin: 45px;
+      height: 1px;
+      font-size: 28px;
+      font-family: Menlo, Monaco, 'Courier New', monospace;
+      color: black;
+      height: fit-content;
+      border: orange solid 3px;
+      width: fit-content;
+      padding: 10px;
+      pointer-events: none;
+      user-select: none;git 
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
 
-    </head>
-    <body>
-        
-        <div id=header>
+    #email {
+      margin: 45px;
+      font-family: Menlo, Monaco, 'Courier New', monospace;
+      color: black;
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
 
-            Arnav Krishna
-        </div>
+    #drawing-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 998;
+      pointer-events: auto;
+    }
 
-        <div id=email>
-            e: arnavkrishna.1@gmail.com
-        </div>
-        <p></p>
-        <p> </p>
-        <p> </p>
-        <p> </p>
-        <p> </p>
-        <p> </p>
-        <p> </p>
-        <p> </p>
-        <p> </p>
-        <p> </p>
-        <p> </p>
-        <p> </p>
-        <p> </p>
-        <p> </p>
-        <p> </p>
-        <p> </p>
-        <p> </p>
-        <p> </p>
-        <p> </p>
+    .color-palette {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 999;
+    }
 
-    </body>
+    .color-button {
+      width: 40px;
+      height: 40px;
+      margin-right: 5px;
+      border-radius: 20px;
+      cursor: crosshair;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id=header>
+
+    Arnav Krishna
+  </div>
+
+  <div id=email>
+    email: arnavkrishna.1@gmail.com
+  </div>
+
+  <div class="color-palette">
+    <button class="color-button" style="background: rgb(132, 32, 32);" data-color="rgb(132, 32, 32)"></button>
+    <button class="color-button" style="background: rgba(0, 128, 0, 0.877);"
+      data-color="rgba(0, 128, 0, 0.877)"></button>
+    <button class="color-button" style="background: rgba(20, 173, 173, 0.582);"
+      data-color="rgba(20, 173, 173, 0.582)"></button>
+    <button class="color-button" style="background: rgb(250, 250, 115);" data-color="rgb(250, 250, 115)"></button>
+    <button class="color-button" style="background: rgba(255, 50, 50, 0.877);"
+      data-color="rgba(255, 50, 50, 0.877)"></button>
+    <button class="color-button" style="background: white;" data-color="white"></button>
+    <button class="color-button" style="background: black;" data-color="black"></button>
+
+  </div>
+  <script src="sketch.js"></script>
+</body>
+
 </html>
