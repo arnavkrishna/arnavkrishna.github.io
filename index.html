@@ -91,6 +91,40 @@
         <button class="color-button" style="background: black;" data-color="black"></button>
     </div>
     <script src="sketch.js"></script>
+
+    <script>
+      let noise, env, analyzer;
+  
+      function setup() {
+        let cnv = createCanvas(150, 150); // Reduced canvas size to fit as a small box
+        cnv.position(windowWidth - 160, windowHeight - 160); // Positioned canvas to the bottom right corner
+        noise = new p5.Noise();
+        noise.start();
+  
+        noise.amp(0);
+  
+        env = new p5.Env();
+        env.setADSR(0.001, 0.1, 0.2, 0.1);
+        env.setRange(1, 0);
+  
+        analyzer = new p5.Amplitude();
+      }
+  
+      function draw() {
+        background(0);
+        let level = analyzer.getLevel();
+        let levelHeight = map(level, 0, 0.4, 0, height);
+        fill(100, 250, 100);
+        rect(0, height, width, -levelHeight);
+      }
+  
+      function mousePressed() {
+        if(mouseX > windowWidth - 160 && mouseX < windowWidth && mouseY > windowHeight - 160 && mouseY < windowHeight) {
+          env.play(noise);
+        }
+      }
+  </script>
+  
 </body>
 
 </html>
