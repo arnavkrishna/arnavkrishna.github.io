@@ -3,10 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- This line ensures proper scaling on mobile -->
     <title>hello</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <style>
         body {
@@ -62,20 +61,8 @@
             border-radius: 20px;
             cursor: crosshair;
         }
-        #undo-button {
-          background: none;
-          border: none;
-          cursor: pointer;
-          font-size: 24px;
-          color: #333;  
-          margin-left: 10px; 
-          margin-bottom: 3px;
-      }
-      
-      #undo-button:hover {
-          color: #555;
-      }
-      
+
+        /* Media query for mobile view */
         @media (max-width: 768px) {
             #header, #email {
                 margin: 20px;
@@ -104,9 +91,6 @@
         </button>
         <button class="color-button" style="background: white;" data-color="white"></button>
         <button class="color-button" style="background: black;" data-color="black"></button>
-        <button id="undo-button"><i class="fas fa-undo"></i></button>
-      </div>
-      
     </div>
     <script src="sketch.js"></script>
 
