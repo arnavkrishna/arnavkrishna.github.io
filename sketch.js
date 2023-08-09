@@ -14,12 +14,14 @@ function setup() {
             currentColor = this.getAttribute('data-color');
         });
     });
-    function setup() {
-        // Add an event listener for the "Undo" button
-        const undoButton = document.getElementById('undo-button');
-        undoButton.addEventListener('click', undoLastPath);
-    }
+    const undoButton = document.getElementById('undo-button');
+    undoButton.addEventListener('click', undoLastPath);
+}
 
+function undoLastPath() {
+    if (paths.length > 0) {
+        paths.pop();
+    }
 
     // Set the initial color.
     currentColor = 'black';
@@ -28,36 +30,34 @@ function setup() {
 
 function draw() {
     clear();
+  
+    const undoButton = document.getElementById('undo-button');
+    const undoButtonRect = undoButton.getBoundingClientRect();
+  
+    const overUndoButton = mouseX > undoButtonRect.left && mouseX < undoButtonRect.right && 
+                           mouseY > undoButtonRect.top && mouseY < undoButtonRect.bottom;
 
-    // Check if mouse is over color palette
     const colorButtons = document.querySelectorAll('.color-button');
     let overColorPalette = false;
     colorButtons.forEach(button => {
-        const rect = button.getBoundingClientRect();
-        if (mouseX > rect.left && mouseX < rect.right && mouseY > rect.top && mouseY < rect.bottom) {
-            overColorPalette = true;
-        }
+      const rect = button.getBoundingClientRect();
+      if (mouseX > rect.left && mouseX < rect.right && mouseY > rect.top && mouseY < rect.bottom) {
+        overColorPalette = true;
+      }
     });
 
-    if (mouseX > undoButtonRect.left && mouseX < undoButtonRect.right && mouseY > undoButtonRect.top && mouseY < undoButtonRect.bottom) {
-        overColorPalette = true;
-    }
-
-
-    if (!overColorPalette && mouseIsPressed) {
-        const point = {
-            x: mouseX,
-            y: mouseY,
-            color: currentColor
-        };
-        currentPath.push(point);
-        document.body.style.cursor = "none";
+    if (!overColorPalette && !overUndoButton && mouseIsPressed) {
+      const point = {
+        x: mouseX,
+        y: mouseY,
+        color: currentColor
+      };
+      currentPath.push(point);
     } else {
-        if (currentPath.length > 0) {
-            paths.push(currentPath);
-            currentPath = [];
-        }
-        document.body.style.cursor = "default";
+      if (currentPath.length > 0) {
+        paths.push(currentPath);
+        currentPath = [];
+      }
     }
 
     paths.forEach(path => {
