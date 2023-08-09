@@ -39,6 +39,11 @@ function draw() {
         }
     });
 
+    if (mouseX > undoButtonRect.left && mouseX < undoButtonRect.right && mouseY > undoButtonRect.top && mouseY < undoButtonRect.bottom) {
+        overColorPalette = true;
+    }
+
+
     if (!overColorPalette && mouseIsPressed) {
         const point = {
             x: mouseX,
@@ -52,7 +57,7 @@ function draw() {
             paths.push(currentPath);
             currentPath = [];
         }
-        document.body.style.cursor = "default"; 
+        document.body.style.cursor = "default";
     }
 
     paths.forEach(path => {
