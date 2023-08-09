@@ -14,6 +14,11 @@ function setup() {
             currentColor = this.getAttribute('data-color');
         });
     });
+    function setup() {
+        // Add an event listener for the "Undo" button
+        const undoButton = document.getElementById('undo-button');
+        undoButton.addEventListener('click', undoLastPath);
+    }
 
 
     // Set the initial color.
@@ -41,13 +46,13 @@ function draw() {
             color: currentColor
         };
         currentPath.push(point);
-        document.body.style.cursor = "none"; // Add this line
+        document.body.style.cursor = "none";
     } else {
         if (currentPath.length > 0) {
             paths.push(currentPath);
             currentPath = [];
         }
-        document.body.style.cursor = "default"; // Add this line
+        document.body.style.cursor = "default"; 
     }
 
     paths.forEach(path => {
@@ -74,6 +79,11 @@ function draw() {
 }
 
 
+function undoLastPath() {
+    if (paths.length > 0) {
+        paths.pop();
+    }
+}
 
 
 function keyPressed() {
