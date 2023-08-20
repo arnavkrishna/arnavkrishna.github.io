@@ -3,13 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- This line ensures proper scaling on mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This line ensures proper scaling on mobile -->
     <title>hello</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <style>
         body {
             font-family: Menlo, Monaco, 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
         }
 
         #header {
@@ -39,12 +45,36 @@
             -ms-user-select: none;
         }
 
+        * {
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -khtml-user-select: none;
+            /* Konqueror HTML */
+            -moz-user-select: none;
+            /* Old versions of Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+            /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+        }
+
+
         #drawing-canvas {
             position: fixed;
             top: 0;
             left: 0;
             z-index: 998;
             pointer-events: auto;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            /* Ensure that other elements like your email div are above the canvas */
         }
 
         .color-palette {
@@ -64,7 +94,9 @@
 
         /* Media query for mobile view */
         @media (max-width: 768px) {
-            #header, #email {
+
+            #header,
+            #email {
                 margin: 20px;
                 font-size: 20px;
             }
@@ -81,20 +113,15 @@
     <div id="header">Arnav Krishna</div>
     <div id="email">email: arnavkrishna.1@gmail.com</div>
     <div class="color-palette">
-        <button class="color-button" style="background: rgb(132, 32, 32);" data-color="rgb(132, 32, 32)"></button>
-        <button class="color-button" style="background: rgba(0, 128, 0, 0.877);" data-color="rgba(0, 128, 0, 0.877)">
+        <button class="color-button" style="background: rgb(67, 55, 206);" data-color="rgb(67, 55, 206)"></button>
+        <button class="color-button" style="background: rgba(255, 50, 50, 0.877);"
+            data-color="rgba(255, 50, 50, 0.877)">
         </button>
-        <button class="color-button" style="background: rgba(20, 173, 173, 0.582);"
-            data-color="rgba(20, 173, 173, 0.582)"></button>
-        <button class="color-button" style="background: rgb(250, 250, 115);" data-color="rgb(250, 250, 115)"></button>
-        <button class="color-button" style="background: rgba(255, 50, 50, 0.877);" data-color="rgba(255, 50, 50, 0.877)">
-        </button>
-        <button class="color-button" style="background: white;" data-color="white"></button>
         <button class="color-button" style="background: black;" data-color="black"></button>
     </div>
-    <script src="sketch.js"></script>
+    <script src="sketch2.js"></script>
 
-  
+
 </body>
 
 </html>
