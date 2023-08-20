@@ -50,7 +50,7 @@ function draw() {
     stroke(currentColor);  // Setting the color for the kaleidoscope line
 
     // Kaleidoscope drawing
-    translate(width / 2, height / 2 - 38);
+    translate(width / 2, height / 2 );
 
     if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
         let mx = mouseX - width / 2;
