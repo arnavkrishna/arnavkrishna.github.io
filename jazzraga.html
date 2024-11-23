@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lee Torchia</title>
+    <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #cc3366;
+            color: #fff;
+        }
+
+        header {
+            background: url('images/HEADER.jpg') no-repeat center center;
+            text-align: center;
+            height: 200px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color:  #cc3366;
+            margin: 0;
+            position: relative; /* Keeps it positioned below the header */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-family: Papyrus, "Gabriela", serif; /* Papyrus font for the nav bar */
+            font-size: 22px;
+            font-weight: bold;
+            margin: 0 15px;
+            padding: 0px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #fabc5f;
+            border-radius: 4px;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .photo-section {
+          display: flex;
+          justify-content: space-evenly; /* Ensures equal spacing between images */
+          align-items: center; /* Centers the images vertically */
+          gap: 10px; /* Adds spacing between images */
+          flex-wrap: wrap; /* Allows wrapping on smaller screens */
+          margin-top: 20px;
+      }
+      
+      .photo-section img {
+          max-width: 45%; /* Each image takes up to 45% of the container width */
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      }
+      
+      /* Adjustments for smaller screens */
+      @media (max-width: 600px) {
+          .photo-section img {
+              max-width: 100%; /* Images stack on smaller screens */
+          }
+      }      
+
+
+        h1 {
+          font-family: Papyrus, "Gabriela", serif; /* Papyrus font for the nav bar */
+          font-weight: bolder;
+          font-size: 28px; /* Adjust size as needed */
+          text-align: left;
+          margin: 20px 0; /* Add spacing around the heading */
+      }
+      
+
+        .content {
+            width: 90%;
+            max-width: 750px;
+            text-align: left;
+            font-family: Consolas; /* Papyrus font for the nav bar */
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding-left: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 420px;
+            height: 315px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        footer {
+            background: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #fff;
+        }
+
+        footer a:hover {
+            color: #ffe0b2;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            header {
+                height: 150px;
+            }
+
+            nav a {
+                font-size: 16px;
+                margin: 0 5px;
+            }
+
+            iframe {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Header Background Image -->
+    </header>
+    <nav>
+        <a href="booking.html">Booking</a>
+        <a href="biography.html">Biography</a>
+        <a href="itinerary.html">Itinerary</a>
+        <a href="recordings.html">Recordings</a>
+        <a href="inspiration.html">Inspiration</a>
+        <a href="photos.html">Photos</a>
+    </nav>
+    <main>
+        <div class="content">
+            <h1>Lee Torchia</h1>
+            <p>Singer of Raga and Jazz.</p>
+            <p>Accepting bookings for concerts, festivals, lectures and workshops.</p>
+            <a href="http://www.leetorchia.com/college-music-booking-agency/" 
+            target="_blank" 
+            title="20% DISCOUNT" 
+            style="font-weight: bold">
+            Click here to book
+         </a>
+         
+            <div class="photo-section">
+                <img src="images/4-09_metropolitan_indian_lee_torchia.jpeg" alt="Lee Torchia">
+                <img src="images/09-4-08_metropolitan_lee_torchia.jpg" alt="Lee Torchia New Photo">
+            </div>
+            <iframe src="https://www.youtube.com/embed/fK9qCgWvyIw" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </main>
+    <footer>
+        <p>Contact: <a href="mailto:leetorchia@jazzraga.com">leetorchia@jazzraga.com</a> | 212-695-1906</p>
+        <p>&copy; Lee Torchia 2003 - 2025. All rights reserved.</p>
+    </footer>
+</body>
+</html>
