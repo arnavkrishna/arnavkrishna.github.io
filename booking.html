@@ -19,8 +19,7 @@
             display: flex;
             justify-content: center;
             background-color: #cc3366;
-            margin: 0;
-            position: relative;
+            padding: 10px 0;
         }
 
         nav a {
@@ -30,13 +29,11 @@
             font-size: 18px;
             font-weight: bold;
             margin: 0 15px;
-            padding: 5px;
             transition: color 0.3s ease, background-color 0.3s ease;
         }
 
         nav a:hover {
             color: #fabc5f;
-            border-radius: 4px;
         }
 
         main {
@@ -48,9 +45,12 @@
 
         h1, h2 {
             font-family: Papyrus, "Gabriela", serif;
-            font-size: 32px;
             text-align: center;
             margin: 20px 0;
+        }
+
+        h1 {
+            font-size: 32px;
         }
 
         h2 {
@@ -58,6 +58,7 @@
             color: #fabc5f;
         }
 
+        
         p {
             font-size: 16px;
             text-align: center;
@@ -68,21 +69,25 @@
             margin: 20px 0;
         }
 
-        .cta a {
+        .cta button {
             display: inline-block;
             background-color: #fabc5f;
             color: #cc3366;
             font-weight: bold;
             text-decoration: none;
             padding: 10px 20px;
+            border: none;
             border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        .cta a:hover {
+        .cta button:hover {
             background-color: #cc3366;
             color: #fff;
         }
+
         .services {
             margin: 30px 0;
             background: rgba(255, 255, 255, 0.1);
@@ -90,52 +95,85 @@
             border-radius: 8px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
         }
-        
-        .services h2 {
-            margin-top: 10px; /* Reduced spacing above */
-            margin-bottom: 20px;
-            font-size: 26px;
-            color: #fabc5f;
-        }
-        
-        .services h3 {
-            font-size: 20px;
-            text-align: center;
-            color: #fff;
-        }
-        
-        .services ul {
-            list-style: none;
-            text-align: center;
-            padding: 0;
-        }
-        
-        .services ul li {
-            font-size: 16px;
-            margin: 10px 0;
-        }
-        
+
+
 
         footer a:hover {
             color: #fabc5f;
         }
 
-        /* Responsive Styles */
-        @media (max-width: 600px) {
-            h1, h2 {
-                font-size: 24px;
-            }
+        /* Pop-Up Form Styles */
+        .popup-form, .thank-you-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 600px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
 
-            nav a {
-                font-size: 18px;
-            }
+        .popup-form h3, .thank-you-popup h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #cc3366;
+        }
+
+        .popup-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .popup-form input,
+        .popup-form textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .popup-form button, .thank-you-popup button {
+            width: 100%;
+            background-color: #cc3366;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .popup-form button:hover, .thank-you-popup button:hover {
+            background-color: #fabc5f;
+            color: #cc3366;
+        }
+
+        /* Overlay to Dim Background */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 999;
         }
     </style>
 </head>
 <body>
-    <header>
-        <!-- Header Background Image -->
-    </header>
+    <header></header>
     <nav>
         <a href="biography.html">Biography</a>
         <a href="itinerary.html">Itinerary</a>
@@ -144,36 +182,92 @@
     </nav>
     <main>
         <h1>Book Lee Torchia</h1>
-        <p>
-            Lee Torchia is a renowned singer deeply versed North Indian Classical Raga.</p>
-        <p>Ancient vibrations provide calming and educational experience of overtones and microtone musical modes.  
-        </p></p>
+        <p>Lee Torchia is a renowned singer deeply versed in North Indian Classical Raga.</p>
+        <p>Ancient vibrations provide calming and educational experiences of overtones and microtone musical modes.</p>
         <div class="cta">
-            <a href="mailto:leetorchiasings@gmail.com?subject=Booking Inquiry">Contact Lee Now</a>
+            <button onclick="openForm()">Submit an Inquiry</button>
         </div>
         <section class="services">
             <h2>Services Offered</h2>
-            <h3>Music Performances:</h3>
+                <h3>Musical Performances</h3>
             <ul>
                 <li>Ancient Classical Raga, Classical Jazz, and JazzRaga Fusion Concerts</li>
                 <li>International Festivals</li>
                 <li>Special Events</li>
-                <li></li>
             </ul>
-            <h3>Outreach Masterclasses (Participatory Vocal Workshops):</h3>
+                <h3>Outreach Masterclasses</h3>
             <ul>
                 <li>North Indian Classical Masterclass</li>
                 <li>Ancient Vocal Techniques</li>
- 
             </ul>
         </section>
-        <p>
-            Don't miss the chance to bring Lee's captivating voice and musical artistry to your audience. Whether it’s a solo performance or a collaborative workshop, Lee's passion and talent create unforgettable experiences.
-        </p>
         <div class="cta">
-            <a href="mailto:leetorchiasings@gmail.com?subject=Booking Inquiry">Get a 20% Discount with Block Booking</a>
+            <button onclick="openForm()">Get a 20% Discount with Block Booking</button>
         </div>
     </main>
 
+    <!-- Pop-Up Form -->
+    <div class="overlay" id="overlay" onclick="closeForm()"></div>
+    <div class="popup-form" id="popupForm">
+        <h3>Book Lee Torchia</h3>
+        <form action="https://formspree.io/f/mkgnvejo" method="POST">
+            <label for="name">Name*</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone*</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company">
+
+            <label for="location">Event Location</label>
+            <input type="text" id="location" name="location">
+
+            <label for="budget">Budget</label>
+            <input type="text" id="budget" name="budget">
+
+            <label for="dates">Dates of Interest*</label>
+            <input type="text" id="dates" name="dates" required>
+
+            <label for="notes">Notes</label>
+            <textarea id="notes" name="notes" rows="4"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Thank You Pop-Up -->
+    <div class="thank-you-popup" id="thankYouPopup">
+        <h3>Thank You!</h3>
+        <p>Thanks for your inquiry, we'll be in touch shortly.</p>
+        <button onclick="closeThankYou()">Close</button>
+    </div>
+
+    <script>
+        function openForm() {
+            document.getElementById('popupForm').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closeForm() {
+            document.getElementById('popupForm').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        function showThankYou(event) {
+            event.preventDefault();
+            closeForm();
+            document.getElementById('thankYouPopup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closeThankYou() {
+            document.getElementById('thankYouPopup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
