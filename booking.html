@@ -14,23 +14,40 @@
             color: #fff;
             line-height: 1.6;
         }
-
+        
         nav {
             display: flex;
+            flex-wrap: wrap; /* Allows items to wrap on smaller screens */
             justify-content: center;
             background-color: #cc3366;
             padding: 10px 0;
         }
-
+        
         nav a {
             text-decoration: none;
             color: white;
             font-family: Papyrus, "Gabriela", serif;
-            font-size: 18px;
+            font-size: 24px;
             font-weight: bold;
             margin: 0 15px;
             transition: color 0.3s ease, background-color 0.3s ease;
         }
+        
+        @media (max-width: 600px) {
+            header {
+                height: auto; /* Adjusts height dynamically based on content */
+            }
+        
+            nav a {
+                font-size: 18px; /* Reduces font size for better fit */
+                margin: 5px; /* Reduces spacing between links */
+            }
+        
+            nav {
+                flex-direction: column; /* Stacks links vertically on small screens */
+            }
+        }
+
 
         nav a:hover {
             color: #fabc5f;
