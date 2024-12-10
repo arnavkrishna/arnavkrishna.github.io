@@ -1,121 +1,157 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>jazz raga recording</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<script language="JavaScript" type="text/JavaScript">
-<!--
-function MM_swapImgRestore() { //v3.0
-  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jazz Raga Recording</title>
+    <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #cc3366;
+            color: #fff;
+        }
 
-function MM_preloadImages() { //v3.0
-  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
-    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
-    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
-}
+        header {
+            background: url('images/HEADER.jpg') no-repeat center center;
+            text-align: center;
+            height: 200px;
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+        }
 
-function MM_findObj(n, d) { //v4.01
-  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
-    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
-  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
-  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
-  if(!x && d.getElementById) x=d.getElementById(n); return x;
-}
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #cc3366;
+            padding: 10px 0;
+        }
 
-function MM_swapImage() { //v3.0
-  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
-   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
-}
-//-->
-</script>
-<style type="text/css">
-<!--
-p.MsoNormal {
-margin:0in;
-margin-bottom:.0001pt;
-font-size:12.0pt;
-font-family:"Times New Roman";
-}
-.style3 {font-weight: bold}
--->
-</style>
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-family: Papyrus, "Gabriela", serif;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 15px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #fabc5f;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1, h4 {
+            font-family: Consolas, Arial, Helvetica, sans-serif;
+            text-align: left;
+            font-size: 21px;
+            margin-bottom: 20px;
+        }
+
+        p, a {
+            font-family: Consolas, Arial, sans-serif;
+            text-align: left;
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #fbd298;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: white;
+        }
+
+        .photo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .photo-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .photo-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .custom-footer {
+            background: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .custom-footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .custom-footer a:hover {
+            color: #ffe0b2;
+        }
+    </style>
 </head>
+<body>
+    <header></header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="booking.html">Booking</a>
+        <a href="biography.html">Biography</a>
+        <a href="photos.html">Press Kit</a>
+    </nav>
+    <main>
+        <div class="content">
+            <h1>Jazz Raga Recording</h1>
+            <p><strong>Scott Yanow, The Jazz Singers, The Ultimate Guide:</strong></p>
+            <p>"Lee Torchia has in recent years sought to mix together jazz with Indian music, calling it 'jazz raga.' Years earlier she recorded a fine album, now reissued as the CD <em>Lover Man</em> (Jazz Raga 001), with tenor-saxophonist Ricky Ford, pianist Ram Ramirez, bassist Milt Hinton and drummer Mel Lewis. She pays tribute to Billie Holiday through her repertoire rather than trying to copy her, and the results are rewarding." — <a href="http://www.scottyanow.com" target="_blank">www.scottyanow.com</a></p>
 
-<body bgcolor="cc3366" topmargin="0" onLoad="MM_preloadImages('images/navbio_roll.jpg','images/navitinerary_roll.jpg','images/navrecord_roll.jpg','images/navcontact_roll.jpg','images/navphoto_roll.jpg','images/navbio_roll.gif','images/itinerary_roll.gif','images/recordings_roll.gif','images/inspiration_roll.gif','images/photos_roll.gif')">
-<table width="750" border="0"  cellpadding="0" cellspacing="0" align="center" background="images/HEADER.jpg" style="background-repeat:no-repeat">
-  <tr align="left" valign="middle"> 
-    <td height="189" colspan="4"><p>&nbsp;</p>
-      <p><img src="images/blank_spacer.gif" width="189" height="10"><a href="biography.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','images/navbio_roll.gif',1)"><img src="images/navbio.gif" name="Image6" width="66" height="18" border="0"></a><img src="images/spacer_1.gif" width="16" height="18"><a href="itinerary.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','images/itinerary_roll.gif',1)"><img src="images/itinerary.gif" name="Image8" width="54" height="18" border="0"></a><img src="images/spacer_2.gif" width="16" height="18"><a href="recordings.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image10','','images/recordings_roll.gif',1)"><img src="images/recordings.gif" name="Image10" width="66" height="18" border="0"></a><img src="images/spacer_3.gif" width="15" height="18"><a href="inspiration.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image12','','images/inspiration_roll.gif',1)"><img src="images/inspiration.gif" name="Image12" width="69" height="18" border="0"></a><img src="images/spacer_4.gif" width="14" height="18"><a href="photos.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image14','','images/photos_roll.gif',1)"><img src="images/photos.gif" name="Image14" width="45" height="18" border="0"></a><img src="images/blank_spacer.gif" width="200" height="10"><strong><br>
-&nbsp;&nbsp;<br>
-<br>
-&nbsp;&nbsp;      </strong></p>
-      <p><font color="#FFFFFF"> <strong>Janow, Scott, <u>The Jazz Singers, The Ultimate Guide:</u>  &nbsp; &quot;Lee Torchia </strong>has in recent years sought to mix together jazz with Indian music, calling it 'jazz raga.' Years earlier she recorded a fine album, now reissued as the CD <em>Lover Man</em> (Jazz Raga 001), with tenor-saxophonist Ricky Ford, pianist Ram Ramirez, bassist Milt Hinton and drummer Mel Lewis. She pays tribute to Billie Holiday through her repertoire rather than trying to copy her, and the results are rewarding.&quot;&nbsp;&nbsp;&nbsp;Backbeat Books, 2008&nbsp; &nbsp;</font><A href="http://www.scottyanow.com" rel="nofollow" target="_blank"><SPAN id="lw_1286899314_1" class="yshortcuts">www.scottyanow.com</SPAN></A>&nbsp;</p>
-      <p><font color="#FFFFFF"> <strong>Review&nbsp;<a href="http://itunes.apple.com/us/artist/lee-torchia/id4059677" target="_new">ITUNES</a>&nbsp;&nbsp;<br>
-        <span class="customerReviewTitle">"I bought it and I'd buy it again..."</span>
-&nbsp;&nbsp;<SPAN class="user-info">by PDeV </SPAN><br>
-<strong>Swing out on Them There Eyes, It's Only a Paper Moon, Ain't   Misbehavin', Tea for Two... Lee Torchia pretty voice pretty phrasing pretty   jazz... I bought the album specifically for I Cover the Waterfront a jazz   favorite a jazz standard. Let me say - every track of the 12 a good one. And   nice piano (Roger Ramirez) nice sax (Ricky Ford) nice everything Milt Hinton,   bass and Mel Lewis, drums. Oh jazz. Oh jazz. I'd buy it again. Loverman highly   recommended.&nbsp;</strong></font><br>
-        <a href="http://www.amazon.com/Loverman/dp/B000VCH104/ref=sr_1_1?ie=UTF8&s=dmusic&qid=1277918528&sr=8-1"><br>
-        </a><br>
-      </p></td>
-  </tr>
-  <tr> 
-    <td width="203" height="778" rowspan="2" align="right" valign="top" background="images/bg_tamoura.jpg" style="background-repeat:no-repeat"><div align="justify">
-      <a href="http://www.cdbaby.com/leetorchia" target="_new">Buy at CDBABY</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>  
-      <table width="90%" border="1" summary="Album CD Cover Lee Torchia, Loverman">
-        <caption>
-          loverman CD lee torchia
-        </caption>
-        <tr>
-          <th scope="col"><img src="images/image6AH.jpg" alt="lee torchia" width="280" height="278" border="1" align="left"></th>
-          <th scope="col"><img src="images/cd_backcover.jpg" alt="CD BACK" width="327" height="276" border="1"></th>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-        </tr>
-      </table>
-      <a href="http://www.amazon.com/Loverman/dp/B000VCH104/ref=sr_1_1?ie=UTF8&s=dmusic&qid=1277918528&sr=8-1" target="_new">Buy at Amazon.com</a><br>      &nbsp;&nbsp;
-<DIV class="customer-review"></DIV>
-      <h4 align="center"><span class="style3"><font color="#FFFF00" size="3" face="Arial, Helvetica, sans-serif">&nbsp;The 
-        Artists </font><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">(from Left to right)<br>
-        <br>
-        <font size="2">Mel Lewis - Drums, <br>
-        Roger 'Ram' Ramirez - Piano, <br>
-        Ricky Ford - Sax,<br>
-        Lee Torchia - Vocals, <br>
-        Milt 'The Judge' Hinton - Bass</font>&nbsp;</span></h4>
-      <H4 align="center"><br>
-      </H4>
-      <DIV class="customer-review">
-        <H5 align="center">
-          <DIV class="rating" role="text" aria-label="4 stars">
-              <DIV></DIV>
-          </DIV>
-        </H5>
-      </DIV>
-    <p></td>
-   <br>
-        <a href="http://www.amazon.com/Loverman/dp/B000VCH104/ref=sr_1_1?ie=UTF8&s=dmusic&qid=1277918528&sr=8-1"></a><br>
-    </td>
-    
-      <p>&nbsp;</p><br>
-<br>
-<br>
+            <div class="photo-section">
+                <div class="photo-container">
+                    <img src="images/image6AH.jpg" alt="Lee Torchia Album Cover">
+                </div>
+                <div class="photo-container">
+                    <img src="images/cd_backcover.jpg" alt="CD Back Cover">
+                    <p><a href="http://www.amazon.com/Loverman/dp/B000VCH104" target="_blank">Buy at Amazon</a></p>
+                </div>
+            </div>
 
-      <p></font></font></strong></p></td>
-  </tr>
-  <tr>
-    <td align="left" valign="top">&nbsp;</td>
-  </tr>
-  <tr align="left" valign="top"> 
-    <td height="67" colspan="4" valign="top" align="left"><img src="images/footer.jpg" width="750" height="9"><br> 
-      <img src="images/footerspacer.gif" width="50" height="38" align="left"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>jazz 
-      raga </strong><br>
-      484 West 43 Street, #32B, New York, New York, 10036 :: email:<a href="mailto:leetorchia@jazzraga.com ">leetorchia@jazzraga.com 
-      </a><br>
-      <font size="1">all rights reserved 2003- 2010 </font></font><font size="1"></p></font></td>
-  </tr>
-</table>
+            <h4>The Artists</h4>
+            <ul>
+                <li>Mel Lewis - Drums</li>
+                <li>Roger "Ram" Ramirez - Piano</li>
+                <li>Ricky Ford - Sax</li>
+                <li>Lee Torchia - Vocals</li>
+                <li>Milt "The Judge" Hinton - Bass</li>
+            </ul>
+        </div>
+    </main>
+    <footer class="custom-footer">
+        <div>Contact: <a href="mailto:leetorchiasings@gmail.com">leetorchiasings@gmail.com</a></div>
+        <div>484 West 43 Street, #32B, New York, New York, 10036</div>
+        <div>&copy; 2003-2025 Lee Torchia. All rights reserved.</div>
+    </footer>
 </body>
 </html>

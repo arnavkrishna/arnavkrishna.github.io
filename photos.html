@@ -1,200 +1,179 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lee Torchia</title>
+    <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #cc3366;
+            color: #fff;
+        }
 
-// Script Source: CodeLifter.com
-// Copyright 2003
-// Do not remove this notice.
+        header {
+            background: url('images/HEADER.jpg') no-repeat center center;
+            text-align: center;
+            height: 200px;
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+        }
 
-// SETUPS:
-// ===============================
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #cc3366;
+            padding: 10px 0;
+        }
 
-// Set the horizontal and vertical position for the popup
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-family: Papyrus, "Gabriela", serif;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 15px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
 
-PositionX = 100;
-PositionY = 100;
+        nav a:hover {
+            color: #fabc5f;
+        }
 
-// Set these value approximately 20 pixels greater than the
-// size of the largest image to be used (needed for Netscape)
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-defaultWidth  = 500;
-defaultHeight = 500;
+        h1 {
+            font-family: Papyrus, "Gabriela", serif;
+            text-align: left;
+            font-size: 23px;
+            margin-bottom: 20px;
+        }
 
-// Set autoclose true to have the window close automatically
-// Set autoclose false to allow multiple popup windows
+        p {
+            font-family: Consolas;
+            text-align: left;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
 
-var AutoClose = true;
+        a {
+            text-align: left;
+            font-size: 17px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #fabc5f;
+        }
 
-// Do not edit below this line...
-// ================================
-if (parseInt(navigator.appVersion.charAt(0))>=4){
-var isNN=(navigator.appName=="Netscape")?1:0;
-var isIE=(navigator.appName.indexOf("Microsoft")!=-1)?1:0;}
-var optNN='scrollbars=no,width='+defaultWidth+',height='+defaultHeight+',left='+PositionX+',top='+PositionY;
-var optIE='scrollbars=no,width=150,height=100,left='+PositionX+',top='+PositionY;
-function popImage(imageURL,imageTitle){
-if (isNN){imgWin=window.open('about:blank','',optNN);}
-if (isIE){imgWin=window.open('about:blank','',optIE);}
-with (imgWin.document){
-writeln('<html><head><title>Loading...</title><style>body{margin:0px;}</style>');writeln('<sc'+'ript>');
-writeln('var isNN,isIE;');writeln('if (parseInt(navigator.appVersion.charAt(0))>=4){');
-writeln('isNN=(navigator.appName=="Netscape")?1:0;');writeln('isIE=(navigator.appName.indexOf("Microsoft")!=-1)?1:0;}');
-writeln('function reSizeToImage(){');writeln('if (isIE){');writeln('window.resizeTo(100,100);');
-writeln('width=100-(document.body.clientWidth-document.images[0].width);');
-writeln('height=100-(document.body.clientHeight-document.images[0].height);');
-writeln('window.resizeTo(width,height);}');writeln('if (isNN){');       
-writeln('window.innerWidth=document.images["George"].width;');writeln('window.innerHeight=document.images["George"].height;}}');
-writeln('function doTitle(){document.title="'+imageTitle+'";}');writeln('</sc'+'ript>');
-if (!AutoClose) writeln('</head><body bgcolor=000000 scroll="no" onload="reSizeToImage();doTitle();self.focus()">')
-else writeln('</head><body bgcolor=000000 scroll="no" onload="reSizeToImage();doTitle();self.focus()" onblur="self.close()">');
-writeln('<img name="George" src='+imageURL+' style="display:block"></body></html>');
-close();		
-}}
+        .photo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
 
-</script>
-<title>jazz raga photos</title>
+        .photo-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
 
+        .photo-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
 
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<script language="JavaScript" type="text/JavaScript">
-<script type="text/javascript">
+        .download-btn {
+            margin-top: 5px;
+            text-decoration: none;
+            background-color: #cc3366;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-41596318-1']);
-  _gaq.push(['_trackPageview']);
+        .download-btn:hover {
+            background-color: #fabc5f;
+            color: #cc3366;
+        }
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+        .custom-footer {
+            background: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+        }
 
-</script>
-<!--
-function MM_swapImgRestore() { //v3.0
-  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
-}
+        .custom-footer a {
+            color: #fff;
+            text-decoration: none;
+        }
 
-function MM_preloadImages() { //v3.0
-  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
-    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
-    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
-}
-
-function MM_findObj(n, d) { //v4.01
-  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
-    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
-  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
-  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
-  if(!x && d.getElementById) x=d.getElementById(n); return x;
-}
-
-function MM_swapImage() { //v3.0
-  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
-   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
-}
-//-->
-</script>
+        .custom-footer a:hover {
+            color: #ffe0b2;
+        }
+    </style>
 </head>
+<body>
+    <header></header>
+    <nav>
+        <a href="booking.html">Booking</a>
+        <a href="biography.html">Biography</a>
+        <a href="recordings.html">Recordings</a>
+        <a href="photos.html">Press Kit</a>
+    </nav>
+    <main>
+        <div class="content">
+            <h1>Lee Torchia</h1>
+            <p>Singer of North Indian Classical Raga and Jazz.</p>
+            <div class="photo-section">
+                <div class="photo-container">
+                    <img src="images/jazzraga.jpg" alt="Lee Torchia">
+                    <a href="images/jazzraga.jpg" download class="download-btn">Download</a>
+                </div>
+                <div class="photo-container">
+                    <img src="images/Indian color promo pic.jpg" alt="Lee Torchia">
+                    <a href="images/Indian color promo pic.jpg" download class="download-btn">Download</a>
+                </div>
+                <div class="photo-container">
+                    <img src="images/Hindustani Classical Vocal Music_page-0001.jpg" alt="Lee Torchia">
+                    <a href="images/Hindustani Classical Vocal Music_page-0001.jpg" download class="download-btn">Download</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="custom-footer">
+        <div>Contact: <a href="mailto:leetorchiasings@gmail.com">leetorchiasings@gmail.com</a> | 917-624-0325</div>
+    </footer>
+    <footer class="custom-footer">
+        <div>&copy; Lee Torchia 2003 - 2025. All rights reserved.</div>
+    </footer>
 
-<body bgcolor="cc3366" topmargin="0" onLoad="MM_preloadImages('images/navbio_roll.jpg','images/navitinerary_roll.jpg','images/navrecord_roll.jpg','images/navcontact_roll.jpg','images/navphoto_roll.jpg')">
+    <script>
+        function openForm() {
+            document.getElementById('popupForm').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
 
-<table width="780" border="0"  cellpadding="0" cellspacing="0" align="center" background="file://///Webshared/SHARED_DIR/SITES/JOB_FOLDER/Kelly/jazzraga/images/HEADER.jpg" style="background-repeat:no-repeat">
-  <tr align="left" valign="middle"> 
-    <td height="189" colspan="2"> <p>&nbsp;</p>
-	  <p><img src="images/blank_spacer.gif" width="189" height="10"><a href="biography.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','images/navbio_roll.gif',1)"><img src="images/navbio.gif" name="Image6" width="66" height="18" border="0"></a><img src="images/spacer_1.gif" width="16" height="18"><a href="itinerary.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','images/itinerary_roll.gif',1)"><img src="images/itinerary.gif" name="Image8" width="54" height="18" border="0"></a><img src="images/spacer_2.gif" width="16" height="18"><a href="recordings.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image10','','images/recordings_roll.gif',1)"><img src="images/recordings.gif" name="Image10" width="66" height="18" border="0"></a><img src="images/spacer_3.gif" width="15" height="18"><a href="inspiration.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image12','','images/inspiration_roll.gif',1)"><img src="images/inspiration.gif" name="Image12" width="69" height="18" border="0"></a><img src="images/spacer_4.gif" width="14" height="18"><a href="photos.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image14','','images/photos_roll.gif',1)"><img src="images/photos.gif" name="Image14" width="45" height="18" border="0"></a><img src="images/blank_spacer.gif" width="200" height="10"></p></td>
-  </tr>
-  <tr> 
-    <td width="207" height="295" align="right" valign="top" background="images/bg_tamoura.jpg" style="background-repeat:no-repeat"><img src="images/photos.jpg" width="94" height="28"><br><br>
-      <img src="images/lee.jpg" alt="Lee Torchia" width="120" height="134" border="1"> 
-    </td>
-    <td width="543" align="left" valign="top"><img src="images/blank_spacer.gif" width="10" height="10"> 
-      <table width="500" border="0" align="center">
-        <tr> 
-          <td width="175" height="293" align="left" valign="top"> 
-            <h4><img src="images/herguru.jpg" alt="Pandit Pran Nath" width="119" height="230" border="1" align="absmiddle"><font color="#FFFFFF" face="Verdana, Arial, Helvetica, sans-serif"><br>
-              My Guru,<br>
-              Pandit Pran Nath<br>
-              (1918 -1996)</font></h4>
-            </td>
-          <td width="315" align="left" valign="top"><font color="#FFFF33" size="3" face="Arial, Helvetica, sans-serif"><strong>Please 
-            click on image to view larger image.</strong></font> <p> <a href="javascript:popImage('images/image5UH.jpg','Promotional photo')"> 
-              <img src="images/sm_image5UH.jpg" width="50" height="80"> </a> <font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">Promotional 
-              photo</font></p>
-            <p><a href="javascript:popImage('images/lee_falls_intothe_Ganges.jpg','Lee fall into the Ganges 
-              in India')">
-			<img src="images/sm_lee_falls_intothe_Ganges.jpg" width="50" height="38" border="1"></a>
-              <font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">Lee falls into the Ganges 
-              in India</font></p>
-           
-		   <p><a href="javascript:popImage('images/Lee_Guruji_Shabda_kahnRikM.jpg','Lee, 
-             Guruji,Shabda kahn,Rik Masterson in India 1996')">
-				<img src="images/sm_Lee_Guruji_Shabda_kahnRi.jpg" width="50" height="37" border="1"> </a>
-              <font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">Lee, 
-              Guruji, Shabda kahn, Rik Masterson in India 1996</font></p>
-            </td>
-        </tr>
-        <tr align="left" valign="top"> 
-          <td> <p> <a href="javascript:popImage('images/Lee_HayatRubardt_Initiatio.jpg','Lee 
-              with Hayat Rubardt initiation Jan. 27th 1996')"> <img src="images/sm_Lee_HayatRubardt_Initiat.jpg" width="50" height="52" border="1"></a> 
-              <font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">I</font><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">nitiation 
-              of Lee and Hayat Jan. 27th 1995</font></p>
-            
-			<p><a href="javascript:popImage('images/Lee_MishaMasud_LincolnCen.jpg','Lee &amp; Misha Massud,Lincoln 
-              Center Library Performance')"> <img src="images/sm_Lee_MishaMasud_LincolnCe.jpg" width="50" height="32" border="1"></a> 
-              <font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">Lee 
-              and Misha Masud,<br>
-              </font><font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">Bruno 
-              Walter Auditorium, Lincoln Center </font></p>
-            
-			<p><a href="javascript:popImage('images/LeeSwingingontheVines.jpg','Lee 
-              swinging on the vines')">
-			  <img src="images/sm_LeeSwingingontheVines.jpg" width="50" height="75" border="1"></a>
-			<font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">Lee 
-              swinging on the vines <br>
-              of the Tapkeshwar Caves in India</font></p></td>
-          
-		  <td> 
-            <p><a href="javascript:popImage('images/LeewithHelenMerrillinJapan.jpg','Lee 
-              with Merrill in Japan 1997')"> <img src="images/sm_LeewithHelenMerrillinJap.jpg" width="50" height="44" border="1"></a> 
-              <font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">Lee 
-              with Helen Merrill in Japan 1997</font></p>
-            
-			<p><a href="javascript:popImage('images/UstadAbdulWaheedkhanChisti.jpg','Lee &amp; Guruji')">
-              <img src="images/sm_UstadAbdulWaheedkhanChis.jpg" width="50" height="35" border="1"></a> 
-              <font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">Ustad 
-              Abdul Waheed Khan Chisti Sabri's Gravesite, Lee &amp; Guruji</font></p>
-           
-		    <p><a href="javascript:popImage('images/youngPanditPranNath.jpg','Pandit 
-              Pran Nath as a young man')">
-			  <img src="images/sm_youngPanditPranNath.jpg" width="50" height="62" border="1"></a>
-			<font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">Pandit 
-              Pran Nath as a young man</font></p>
-            
-			<p><a href="javascript:popImage('images/group_India.jpg','')"> <img src="images/sm_group-India.jpg" width="50" height="24" border="1"></a> 
-              <font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif">Group 
-              India </font></p>
-			  
-            <p> <a href="javascript:popImage('images/webterry_lympzranch.jpg','')"><img src="images/sm_webterry_lympzranch.jpg" width="70" height="44" border="1"></a><br>
-				<font color="#FFFFFF" size="2" face="Arial, Helvetica, sans-serif"><strong>Concert 
-              at Terry Riley's Ranch in California-</strong></font><br>
-              <font color="#FFFF00" size="2" face="Arial, Helvetica, sans-serif">Performers:<br>
-              <font color="#FFFFFF">La Monte Young, Terry Riley, Pandit Pran Nath, 
-              Lee Torchia, Marian Zazeela, Shabda Kahn</font></font></p>
-            </td>
-        </tr>
-      </table>
-
-	</td>
-  </tr>
-  <tr align="left" valign="top"> 
-    <td height="67" colspan="2" valign="top" align="left"><img src="images/footer.jpg" width="750" height="9"><br><img src="images/footerspacer.gif" width="50" height="38" align="left"><font color="#FFFFFF" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>jazz 
-        raga </strong><br>
-        484 West 43 Street, #32B, New York, New York, 10036 :: email:<a href="mailto:leetorchia@jazzraga.com ">leetorchia@jazzraga.com 
-        </a><br>
-      <font size="1">(c) Lee Torchia 2008 all rights reserved</font> </font></p> </td>
-  </tr>
-</table>
+        function closeForm() {
+            document.getElementById('popupForm').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
 </body>
 </html>

@@ -17,19 +17,16 @@
             background: url('images/HEADER.jpg') no-repeat center center;
             text-align: center;
             height: 200px;
-            width: 100%; /* Ensures the header fits the viewport width */
-            max-width: 100%;
+            width: 100%;
             margin: 0;
         }
-        
         nav {
             display: flex;
-            flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+            flex-wrap: wrap;
             justify-content: center;
             background-color: #cc3366;
             padding: 10px 0;
         }
-        
         nav a {
             text-decoration: none;
             color: white;
@@ -39,59 +36,35 @@
             margin: 0 15px;
             transition: color 0.3s ease, background-color 0.3s ease;
         }
-        
-        @media (max-width: 600px) {
-            header {
-                height: auto; /* Adjusts height dynamically based on content */
-            }
-        
-            nav a {
-                font-size: 18px; /* Reduces font size for better fit */
-                margin: 5px; /* Reduces spacing between links */
-            }
-        
-            nav {
-                flex-direction: column; /* Stacks links vertically on small screens */
-            }
-        }
-        
-
-
         nav a:hover {
             color: #fabc5f;
         }
-
         main {
             padding: 20px;
             max-width: 800px;
             margin: 0 auto;
         }
-
         h1 {
             font-family: Papyrus, "Gabriela", serif;
             text-align: left;
             font-size: 23px;
             margin-bottom: 20px;
         }
-
-
         p {
             font-family: Consolas;
             text-align: left;
             font-size: 18px;
             margin-bottom: 20px;
         }
-
         a {
-
-            text-align: left;
             font-size: 17px;
             font-weight: bold;
-            margin-bottom: 20px;
             color: #fabc5f;
+            text-decoration: none;
         }
-        
-
+        a:hover {
+            color: white;
+        }
         .photo-section {
             display: flex;
             flex-wrap: wrap;
@@ -99,122 +72,36 @@
             justify-content: center;
             margin-top: 20px;
         }
-
         .photo-section img {
             max-width: 45%;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
-
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
         iframe {
             width: 100%;
-            max-width: 420px;
-            height: 315px;
-            margin: 20px 0;
+            max-width: 560px;
+            height: 500px;
             border-radius: 8px;
         }
-
-
         .custom-footer {
             background: #222;
             color: #aaa;
             text-align: center;
-            font: consolas;
             padding: 10px;
-            padding-left: 22px;
-            padding-bottom: 10 px;
             font-size: 16px;
         }
-        
-        .custom-footer q {
+        .custom-footer a {
             color: #fff;
-            text-decoration: none;
         }
-        
         .custom-footer a:hover {
             color: #ffe0b2;
-        }
-        
-
-        /* Pop-Up Form Styles */
-        .popup-form {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            color: #333;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            width: 90%;
-            max-width: 600px;
-            z-index: 1000;
-            box-sizing: border-box;
-        }
-
-        .popup-form h3 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #cc3366;
-        }
-
-        .popup-form label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .popup-form input,
-        .popup-form textarea {
-            width: 100%;
-            box-sizing: border-box;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-
-        .popup-form button {
-            width: 100%;
-            background-color: #cc3366;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .popup-form button:hover {
-            background-color: #fabc5f;
-            color: #cc3366;
-        }
-
-        /* Overlay to Dim Background */
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 999;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 600px) {
-            .photo-section img {
-                max-width: 100%;
-            }
-
-            h1 {
-                font-size: 24px;
-            }
         }
     </style>
 </head>
@@ -223,7 +110,6 @@
     <nav>
         <a href="booking.html">Booking</a>
         <a href="biography.html">Biography</a>
-        <a href="itinerary.html">Itinerary</a>
         <a href="recordings.html">Recordings</a>
         <a href="photos.html">Press Kit</a>
     </nav>
@@ -237,7 +123,9 @@
                 <img src="images/4-09_metropolitan_indian_lee_torchia.jpeg" alt="Lee Torchia">
                 <img src="images/09-4-08_metropolitan_lee_torchia.jpg" alt="Lee Torchia New Photo">
             </div>
-            <iframe src="https://www.youtube.com/embed/fK9qCgWvyIw" frameborder="0" allowfullscreen></iframe>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/fK9qCgWvyIw" frameborder="0" allowfullscreen></iframe>
+            </div>
         </div>
     </main>
     <footer class="custom-footer">
@@ -246,51 +134,5 @@
     <footer class="custom-footer">
         <div>&copy; Lee Torchia 2003 - 2025. All rights reserved.</div>
     </footer>
-    
-
-    <!-- Pop-Up Form -->
-    <div class="overlay" id="overlay" onclick="closeForm()"></div>
-    <div class="popup-form" id="popupForm">
-        <h3>Book Lee Torchia</h3>
-        <form action="https://formspree.io/f/mkgnvejo" method="POST">
-            <label for="name">Name*</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email*</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">Phone*</label>
-            <input type="text" id="phone" name="phone" required>
-
-            <label for="company">Company</label>
-            <input type="text" id="company" name="company">
-
-            <label for="location">Event Location</label>
-            <input type="text" id="location" name="location">
-
-            <label for="budget">Budget</label>
-            <input type="text" id="budget" name="budget">
-
-            <label for="dates">Dates of Interest*</label>
-            <input type="text" id="dates" name="dates" required>
-
-            <label for="notes">Notes</label>
-            <textarea id="notes" name="notes" rows="4"></textarea>
-
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-
-    <script>
-        function openForm() {
-            document.getElementById('popupForm').style.display = 'block';
-            document.getElementById('overlay').style.display = 'block';
-        }
-
-        function closeForm() {
-            document.getElementById('popupForm').style.display = 'none';
-            document.getElementById('overlay').style.display = 'none';
-        }
-    </script>
 </body>
 </html>
