@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lee Torchia</title>
-    <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+    <title>Jazz Raga Recording</title>
+    <link rel="icon" href="images/favicon-16x16.png" type="image/x-icon">
     <style>
         /* General Styles */
         body {
@@ -51,26 +51,27 @@
             margin: 0 auto;
         }
 
-        h1 {
-            font-family: Papyrus, "Gabriela", serif;
+        h1, h4 {
+            font-family: Consolas, Arial, Helvetica, sans-serif;
             text-align: left;
-            font-size: 23px;
+            font-size: 21px;
             margin-bottom: 20px;
         }
 
-        p {
-            font-family: Consolas;
+        p, a {
+            font-family: Consolas, Arial, sans-serif;
             text-align: left;
-            font-size: 18px;
+            font-size: 16px;
             margin-bottom: 20px;
+            color: #fbd298;
         }
 
         a {
-            text-align: left;
-            font-size: 17px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #fabc5f;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: white;
         }
 
         .photo-section {
@@ -95,28 +96,12 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
-        .download-btn {
-            margin-top: 5px;
-            text-decoration: none;
-            background-color: #cc3366;
-            color: white;
-            padding: 8px 12px;
-            border-radius: 5px;
-            font-size: 14px;
-            transition: background-color 0.3s ease;
-        }
-
-        .download-btn:hover {
-            background-color: #fabc5f;
-            color: #cc3366;
-        }
-
         .custom-footer {
             background: #222;
             color: #aaa;
             text-align: center;
             padding: 10px;
-            font-size: 16px;
+            font-size: 14px;
         }
 
         .custom-footer a {
@@ -132,48 +117,41 @@
 <body>
     <header></header>
     <nav>
+        <a href="index.html">Home</a>
         <a href="booking.html">Booking</a>
         <a href="biography.html">Biography</a>
-        <a href="recordings.html">Recordings</a>
         <a href="photos.html">Press Kit</a>
     </nav>
     <main>
         <div class="content">
-            <h1>Lee Torchia</h1>
-            <p>Singer of North Indian Classical Raga and Jazz.</p>
+            <h1>Jazz Raga Recording</h1>
+            <p><strong>Scott Yanow, The Jazz Singers, The Ultimate Guide:</strong></p>
+            <p>"Lee Torchia has in recent years sought to mix together jazz with Indian music, calling it 'jazz raga.' Years earlier she recorded a fine album, now reissued as the CD <em>Lover Man</em> (Jazz Raga 001), with tenor-saxophonist Ricky Ford, pianist Ram Ramirez, bassist Milt Hinton and drummer Mel Lewis. She pays tribute to Billie Holiday through her repertoire rather than trying to copy her, and the results are rewarding." — <a href="http://www.scottyanow.com" target="_blank">www.scottyanow.com</a></p>
+
             <div class="photo-section">
                 <div class="photo-container">
-                    <img src="images/jazzraga.jpg" alt="Lee Torchia">
-                    <a href="images/jazzraga.jpg" download class="download-btn">Download</a>
+                    <img src="images/image6AH.jpg" alt="Lee Torchia Album Cover">
                 </div>
                 <div class="photo-container">
-                    <img src="images/Indian color promo pic.jpg" alt="Lee Torchia">
-                    <a href="images/Indian color promo pic.jpg" download class="download-btn">Download</a>
-                </div>
-                <div class="photo-container">
-                    <img src="images/Hindustani Classical Vocal Music_page-0001.jpg" alt="Lee Torchia">
-                    <a href="images/Hindustani Classical Vocal Music_page-0001.jpg" download class="download-btn">Download</a>
+                    <img src="images/cd_backcover.jpg" alt="CD Back Cover">
+                    <p><a href="http://www.amazon.com/Loverman/dp/B000VCH104" target="_blank">Buy at Amazon</a></p>
                 </div>
             </div>
+
+            <h4>The Artists</h4>
+            <ul>
+                <li>Mel Lewis - Drums</li>
+                <li>Roger "Ram" Ramirez - Piano</li>
+                <li>Ricky Ford - Sax</li>
+                <li>Lee Torchia - Vocals</li>
+                <li>Milt "The Judge" Hinton - Bass</li>
+            </ul>
         </div>
     </main>
     <footer class="custom-footer">
-        <div>Contact: <a href="mailto:leetorchiasings@gmail.com">leetorchiasings@gmail.com</a> | 917-624-0325</div>
+        <div>Contact: <a href="mailto:leetorchiasings@gmail.com">leetorchiasings@gmail.com</a></div>
+        <div>484 West 43 Street, #32B, New York, New York, 10036</div>
+        <div>&copy; 2003-2025 Lee Torchia. All rights reserved.</div>
     </footer>
-    <footer class="custom-footer">
-        <div>&copy; Lee Torchia 2003 - 2025. All rights reserved.</div>
-    </footer>
-
-    <script>
-        function openForm() {
-            document.getElementById('popupForm').style.display = 'block';
-            document.getElementById('overlay').style.display = 'block';
-        }
-
-        function closeForm() {
-            document.getElementById('popupForm').style.display = 'none';
-            document.getElementById('overlay').style.display = 'none';
-        }
-    </script>
 </body>
 </html>

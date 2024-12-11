@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lee Torchia</title>
+    <link rel="icon" href="images/favicon-16x16.png" type="image/x-icon">
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #cc3366;
+            color: #fff;
+        }
+        header {
+            background: url('images/HEADER.jpg') no-repeat center center;
+            background-size: contain; /* Ensure the image scales proportionally */
+            text-align: center;
+            height: 200px;
+            width: 100%;
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #cc3366;
+            padding: 10px 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-family: Papyrus, "Gabriela", serif;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 15px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+        nav a:hover {
+            color: #fabc5f;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-family: Papyrus, "Gabriela", serif;
+            text-align: left;
+            font-size: 23px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-family: Consolas;
+            text-align: left;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        a {
+            font-size: 17px;
+            font-weight: bold;
+            color: #fabc5f;
+            text-decoration: none;
+        }
+        a:hover {
+            color: white;
+        }
+        .photo-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .photo-section img {
+            max-width: 45%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 500px;
+            border-radius: 8px;
+        }
+        .custom-footer {
+            background: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .custom-footer a {
+            color: #fff;
+        }
+        .custom-footer a:hover {
+            color: #ffe0b2;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <nav>
+        <a href="booking.html">Booking</a>
+        <a href="biography.html">Biography</a>
+        <a href="recordings.html">Recordings</a>
+        <a href="photos.html">Press Kit</a>
+    </nav>
+    <main>
+        <div class="content">
+            <h1>Lee Torchia</h1>
+            <p>Singer of North Indian Classical Raga and Jazz.</p>
+            <p>Accepting bookings for concerts, festivals, and participatory workshops.</p>
+            <a href="#" onclick="openForm()">Book Now</a>
+            <div class="photo-section">
+                <img src="images/4-09_metropolitan_indian_lee_torchia.jpeg" alt="Lee Torchia">
+                <img src="images/09-4-08_metropolitan_lee_torchia.jpg" alt="Lee Torchia New Photo">
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/fK9qCgWvyIw" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
+    <footer class="custom-footer">
+        <div>Contact: <a href="mailto:leetorchiasings@gmail.com">leetorchiasings@gmail.com</a> | 917-624-0325</div>
+    </footer>
+    <footer class="custom-footer">
+        <div>&copy; Lee Torchia 2003 - 2025. All rights reserved.</div>
+    </footer>
+</body>
+</html>

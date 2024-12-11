@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lee Torchia</title>
-    <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon-16x16.png" type="image/x-icon">
     <style>
         /* General Styles */
         body {
@@ -13,13 +13,16 @@
             background-color: #cc3366;
             color: #fff;
         }
+
         header {
             background: url('images/HEADER.jpg') no-repeat center center;
             text-align: center;
             height: 200px;
             width: 100%;
+            max-width: 100%;
             margin: 0;
         }
+
         nav {
             display: flex;
             flex-wrap: wrap;
@@ -27,6 +30,7 @@
             background-color: #cc3366;
             padding: 10px 0;
         }
+
         nav a {
             text-decoration: none;
             color: white;
@@ -36,60 +40,77 @@
             margin: 0 15px;
             transition: color 0.3s ease, background-color 0.3s ease;
         }
+
         nav a:hover {
             color: #fabc5f;
         }
+
         main {
             padding: 20px;
             max-width: 800px;
             margin: 0 auto;
         }
+
         h1 {
             font-family: Papyrus, "Gabriela", serif;
             text-align: left;
             font-size: 23px;
             margin-bottom: 20px;
         }
+
         p {
             font-family: Consolas;
             text-align: left;
             font-size: 18px;
             margin-bottom: 20px;
         }
+
         a {
+            text-align: left;
             font-size: 17px;
             font-weight: bold;
+            margin-bottom: 20px;
             color: #fabc5f;
-            text-decoration: none;
         }
-        a:hover {
-            color: white;
-        }
+
         .photo-section {
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             margin-top: 20px;
         }
-        .photo-section img {
-            max-width: 45%;
+
+        .photo-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .photo-container img {
+            max-width: 100%;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
-        .video-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
+
+        .download-btn {
+            margin-top: 5px;
+            text-decoration: none;
+            background-color: #cc3366;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
         }
-        iframe {
-            width: 100%;
-            max-width: 560px;
-            height: 500px;
-            border-radius: 8px;
+
+        .download-btn:hover {
+            background-color: #fabc5f;
+            color: #cc3366;
         }
+
         .custom-footer {
             background: #222;
             color: #aaa;
@@ -97,9 +118,12 @@
             padding: 10px;
             font-size: 16px;
         }
+
         .custom-footer a {
             color: #fff;
+            text-decoration: none;
         }
+
         .custom-footer a:hover {
             color: #ffe0b2;
         }
@@ -117,14 +141,19 @@
         <div class="content">
             <h1>Lee Torchia</h1>
             <p>Singer of North Indian Classical Raga and Jazz.</p>
-            <p>Accepting bookings for concerts, festivals, and participatory workshops.</p>
-            <a href="#" onclick="openForm()">Book Now</a>
             <div class="photo-section">
-                <img src="images/4-09_metropolitan_indian_lee_torchia.jpeg" alt="Lee Torchia">
-                <img src="images/09-4-08_metropolitan_lee_torchia.jpg" alt="Lee Torchia New Photo">
-            </div>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/fK9qCgWvyIw" frameborder="0" allowfullscreen></iframe>
+                <div class="photo-container">
+                    <img src="images/jazzraga.jpg" alt="Lee Torchia">
+                    <a href="images/jazzraga.jpg" download class="download-btn">Download</a>
+                </div>
+                <div class="photo-container">
+                    <img src="images/Indian color promo pic.jpg" alt="Lee Torchia">
+                    <a href="images/Indian color promo pic.jpg" download class="download-btn">Download</a>
+                </div>
+                <div class="photo-container">
+                    <img src="images/Hindustani Classical Vocal Music_page-0001.jpg" alt="Lee Torchia">
+                    <a href="images/Hindustani Classical Vocal Music_page-0001.jpg" download class="download-btn">Download</a>
+                </div>
             </div>
         </div>
     </main>
@@ -134,5 +163,17 @@
     <footer class="custom-footer">
         <div>&copy; Lee Torchia 2003 - 2025. All rights reserved.</div>
     </footer>
+
+    <script>
+        function openForm() {
+            document.getElementById('popupForm').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closeForm() {
+            document.getElementById('popupForm').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
